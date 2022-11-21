@@ -3,7 +3,7 @@ class Gourav{
 		System.out.println("Hello");
 	}
 } 
- class Divyaa extends PublicInherit{
+ class Divyaa extends Gourav{
 	public static void main(String[] args){
 		Divyaa div = new Divyaa();
 		div.func();

@@ -1,12 +1,12 @@
-class Gourav{
+class PubicInherit{
 	public void func(){
 		System.out.println("Hello");
 	}
 } 
- class Divyaa extends PublicInherit{
+ class Inherit extends PublicInherit{
 	public static void main(String[] args){
-		Divyaa div = new Divyaa();
-		div.func();
+		Inherit obj = new Inherit();
+		obj.func();
 	}
 	
 }
