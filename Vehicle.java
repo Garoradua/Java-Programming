@@ -18,12 +18,12 @@ class Vehicle {
   }
 }
 
-class Car extends Vehicle {
+class Car {
   private String modelName = "Mustang";
   public static void main(String[] args) {
-    Car myFastCar = new Car();
+    Vehicle myFastCar = new Vehicle();
     myFastCar.honk();
-    System.out.println(myFastCar.brand + " " + myFastCar.modelName);
+    // System.out.println(myFastCar.brand + " " + myFastCar.modelName);
   }
 }
 
