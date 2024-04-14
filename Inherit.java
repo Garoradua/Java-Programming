@@ -3,7 +3,7 @@ class PubicInherit{
 		System.out.println("Hello");
 	}
 } 
- class Inherit extends PublicInherit{
+public class Inherit extends PubicInherit{
 	public static void main(String[] args){
 		Inherit obj = new Inherit();
 		obj.func();

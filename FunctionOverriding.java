@@ -1,4 +1,4 @@
-import java.util.*;
+
 interface Parent{
 	public void run();
 }
