@@ -4,9 +4,7 @@ public class optimized_gcd {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int minNumber;
-        if(a>b) minNumber = b;
-        else minNumber = a;
+        int minNumber = Math.min(a, b);
 
         while(minNumber>0){
             if(a%minNumber ==0 && b%minNumber==0){
