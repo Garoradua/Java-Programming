@@ -1,5 +1,5 @@
 import java.util.*;
-class Stack{
+class Stack implements List<Integer> {
 	int arr[] = new int[5];
 	int top=-1;
 	void push(int value){
