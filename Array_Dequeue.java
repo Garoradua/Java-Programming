@@ -6,6 +6,8 @@ public class Array_Dequeue {
         ad.addFirst(2);
         ad.addLast(3);
         ad.add(5);
+        ad.addFirst(6);
+        ad.add(7);
 
         System.out.println(ad);
         // ad
@@ -13,6 +15,7 @@ public class Array_Dequeue {
         System.out.println(ad.getFirst());
 
         ad.removeLast();
+        ad.removeFirst();
         System.out.println(ad);
     }
 }
