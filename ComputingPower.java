@@ -11,11 +11,8 @@ public class ComputingPower{
     }
 
     private static int computePow(int x, int n) {
-       if(n==0){
-        return 1;
-       }
-       int pow = x;
-       for(int i=2; i<=n; i++){
+       int pow = 1;
+       for(int i=0; i<n; i++){
             pow = pow*x;
        }
        return pow;
