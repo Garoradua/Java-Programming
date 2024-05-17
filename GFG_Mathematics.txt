@@ -1,0 +1,7 @@
+// Addition under modulo
+
+sum = (a%x + b%x )%x
+
+sum = (a+b)%x
+
+why it is not same ?
