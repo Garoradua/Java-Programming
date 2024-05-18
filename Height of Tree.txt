@@ -1,0 +1,7 @@
+int Height(root){
+    if(root == null){
+        return 0;
+    }else{
+        return Math.max(Height(root.left),Height(root.right))+1;
+    }
+}
