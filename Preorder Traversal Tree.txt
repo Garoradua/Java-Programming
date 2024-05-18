@@ -1,0 +1,7 @@
+preorder(root){
+    if(root != null){
+        sout(root.key);
+        preorder(root.left);
+        preorder(root.right);
+    }
+}
