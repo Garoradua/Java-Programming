@@ -1,0 +1,7 @@
+inorder(root){
+    if(root != null){
+        inorder(root.left);
+        inorder(root.key);
+        inorder(root.right);
+    }
+}
