@@ -1,0 +1,5 @@
+printSize(Node root){
+    if(root==null) return 0;
+
+    return ((root.left) + root.right) +1;
+}
