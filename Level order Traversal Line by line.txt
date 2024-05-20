@@ -4,7 +4,7 @@ printLevel(Node root){
     q.add(root);
     q.add(null);
 
-    while(!q.esEmpty()){
+    while(q.size()>1){
         Node curr  = q.pop();
         if(curr == null){
             sout();
