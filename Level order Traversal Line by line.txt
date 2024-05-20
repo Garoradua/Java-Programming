@@ -1,0 +1,22 @@
+printLevel(Node root){
+    if(root==null) return;
+    queue<Node> q = new LinkedList<Node>();
+    q.add(root);
+    q.add(null);
+
+    while(!q.esEmpty()){
+        Node curr  = q.pop();
+        if(curr == null){
+            sout();
+            q.add(null);
+            continue;
+        }
+        sout(root.key);
+        if(curr.left != null){
+            q.add(left);
+        }
+        if(curr.right != null){
+            q.add(right);
+        }
+    }
+}
