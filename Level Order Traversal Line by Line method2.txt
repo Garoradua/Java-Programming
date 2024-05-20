@@ -1,0 +1,14 @@
+PrintLevel(Node root){
+    if(root==null) return;
+    Queue<Node> q = new LinkedList<Node>();
+    q.add(root);
+    while(!q.isEmpty()){
+        int size = q.size();
+        for(int i=0; i<size; i++){
+            sout(root.key);
+            if(curr.left !=null) q.add(left);
+            if(curr.right !=null) q.add(right);
+        }
+        sout();
+    }
+}
