@@ -6,5 +6,5 @@ ChildrenSUm(Node root){
     if(root.right != null) sum += root.right;
 
     return (root.key == sum && ChildrenSUm(root.left) && ChildrenSUm(root.right));
-    }
+     } 
 
