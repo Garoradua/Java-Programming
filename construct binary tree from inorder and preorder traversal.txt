@@ -1,0 +1,14 @@
+int preIndex =0;
+CreateTree(int pre[], int in[], int instart, int inend){
+    if(instart> inend) return null;
+    Node root = new Node(pre[preIndex++]);
+    int inIndex;
+    for(int i=instart; i<inend; i++){
+        if(in[i]==root.key){
+            inIndex = i;
+        }
+    }
+    CreateTree(pre, in, instart, inIndex-1);
+    CreateTree(pre, in, inIndex+1, inend);
+    return root;
+}
