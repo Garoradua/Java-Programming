@@ -1,0 +1,14 @@
+LCA(Node root, int n1, int n2){
+    if(root==null) return null;
+    if(root.key == n1 || root.key ==n2){
+        return root;
+    }
+    Node LCA1 = LCA(root.left, int n1, int n2);
+    Node LCA2 = LCA(root.right, int n1, int n2);
+
+    if(LCA1 !=null && LCA2!=null){
+        return root;
+    }
+    if(LCA1!=null) return LCA1;
+    else return LCA2;
+}
