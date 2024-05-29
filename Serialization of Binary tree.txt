@@ -1,0 +1,10 @@
+public static final EMPTY = -1;
+seralizationTree(Node root, Arraylist<Integer> newArray){
+    if(root==null){
+        newArray.add(EMPTY);
+        return;
+    }
+    newArray.add(root.data);
+    seralizationTree(root.left, newArray);
+    seralizationTree(root.right, newArray);
+}
