@@ -1,0 +1,15 @@
+int index = 0;
+Node deserialization(ArrayList<Integer> newArray){
+    if(newArray.size == index){
+        return null;
+    }
+    if(newArray[index]==-1){
+        return null;
+    }
+    int val = newArray[index];
+    index++;
+    Node root = new Node(val);
+    root.left = deserialization(newArray);
+    root.right = deserialization(newArray);
+    return root;
+}
