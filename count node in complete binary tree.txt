@@ -1,0 +1,20 @@
+countNode(Node root){
+    if(root==null) return null;
+    int lh;
+    int rh;
+    Noce curr = root;
+    while(curr!=null){
+        lh++;
+        curr = curr.left;
+    }
+    curr = root;
+    while(curr!=null){
+        rh++;
+        curr = curr.right;
+    }
+    if(lh==rh){
+        return Math.pow(2,lh)-1;
+    }
+    return 1+countNode(root.left)+countNode(root.right);
+    
+}
