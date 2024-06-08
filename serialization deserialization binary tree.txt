@@ -1,3 +1,7 @@
+
+// In serialization always use preorder traversal
+// deserialize to do desearlize according to array
+
 //{ Driver Code Starts
 import java.io.*;
 import java.util.*;
