@@ -1,6 +1,6 @@
 public class NaiveApproachTofindSecondlargestinArray {
     public static void main(String[] args){
-        int[] arr = {5,20,12,18,20,10};
+        int[] arr = {10,10,10,10,10};
         int max = largest(arr, 5);
         int res = -1;
         for(int i=0; i<arr.length; i++){
