@@ -1,4 +1,4 @@
-abstract class M1{
+ abstract class M1{
 abstract void show();
 }
 class M2 extends M1{
