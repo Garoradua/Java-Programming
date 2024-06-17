@@ -10,12 +10,11 @@ public class Method2LeftRotate {
         for(int i=0; i<d; i++){
             extra[i] = arr[i];
         }
-        int loc = 0;
         for(int i=d; i<arr.length; i++){
-            arr[loc++] = arr[i];
+            arr[i-d] = arr[i];
         }
         for(int i=0; i<d; i++){
-           arr[loc++] = extra[i];
+           arr[arr.length-d+i] = extra[i];
         }
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i] + " ");
