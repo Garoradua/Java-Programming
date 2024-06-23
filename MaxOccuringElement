@@ -1,0 +1,24 @@
+public class Maximumocccuringelement {
+    public static void main(String[] args){
+        int[] left = {1,2,5,7};
+        int[] right = {7,8,7,18};
+        int[] frq = new int[100];
+        int n = left.length;
+        for(int i=0; i<n; i++){
+            for(int j=left[i]; j<=right[i]; j++){
+                frq[j]++;
+            }
+        }
+//        for(int j=0; j<=20; j++){
+//            System.out.println(frq[j]);
+//        }
+        int maximum = 0;
+        int result = 0;
+        for(int i=0; i<100; i++){
+           if(frq[i] > frq[maximum]){
+               maximum = i;
+           }
+        }
+        System.out.println(maximum);
+    }
+}
