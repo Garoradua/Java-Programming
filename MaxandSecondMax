@@ -1,0 +1,18 @@
+public class largestElementinArray {
+    public static void main(String[] args){
+        int[] arr = {10,20,4,20};
+        int maximum = arr[0];
+        int secondMax = -1;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i]>secondMax){
+                if(arr[i]>maximum){
+                    secondMax = maximum;
+                    maximum  = arr[i];
+                }else if(arr[i]==maximum) continue;
+                else secondMax = arr[i];
+            }
+        }
+        System.out.println(maximum);
+        System.out.println(secondMax);
+    }
+}
