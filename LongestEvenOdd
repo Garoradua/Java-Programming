@@ -1,0 +1,16 @@
+public class LongestEvenOdd {
+    public static void main(String[] args){
+        int a[] = {1, 3, 5};
+        int n = a.length;
+        int length=1;
+        int maximum = 0;
+        for(int i=1; i<n; i++){
+            if((a[i-1]%2!=0 && a[i]%2==0) || (a[i-1]%2==0 && a[i]%2!=0)){
+                length++;
+                maximum = Math.max(length, maximum);
+            }else length=1;
+        }
+        System.out.println(maximum);
+    }
+
+}
