@@ -1,0 +1,19 @@
+public class prefixSum {
+    public static void main(String[] args){
+        int[] arr = {2,8,3,9,6,5,4};
+        int n = arr.length;
+        int[] Psum = new int[n];
+        int sum=0;
+        for(int i=0; i<n; i++){
+            sum += arr[i];
+            Psum[i] = sum;
+        }
+        getsum(0,2,Psum);
+        getsum(1,3,Psum);
+        getsum(2,6,Psum);
+    }
+    public static void getsum(int l, int r, int[] Psum){
+        if(l==0) System.out.println(Psum[r]);
+        else System.out.println(Psum[r]-Psum[l-1]);
+    }
+}

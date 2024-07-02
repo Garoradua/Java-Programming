@@ -1,0 +1,17 @@
+public class removeDuplicates {
+    public static void main(String[] args){
+        int[] arr = {2, 3, 3, 4, 4, 4, 5};
+        int n = arr.length;
+        int[] newarr = new int[n];
+        newarr[0] = arr[0];
+        int j=0;
+        for(int i=1; i<n; i++){
+            if(newarr[j] != arr[i]){
+                j++;
+                newarr[j] = arr[i];
+            }
+        }
+        for(int i=0; i<=j; i++)
+            System.out.print(newarr[i]);
+    }
+}

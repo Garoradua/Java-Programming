@@ -1,0 +1,26 @@
+public class MaximumCircularSumSubaray {
+    public static void main(String[] args){
+        int arr[] = {-1, 40, -14, 7, 6, 5, -4, -1};
+        int n = arr.length;
+        int nomral_max = max_normal_subarray(arr,n);
+        System.out.println(nomral_max);
+        int sum=0;
+        for(int i=0; i<n; i++) {
+            sum += arr[i];
+            arr[i] = -arr[i];
+        }
+        System.out.println(sum);
+        int circular_max = sum  + max_normal_subarray(arr,n);
+        System.out.println(circular_max);
+        System.out.println(Math.max(circular_max, nomral_max));
+    }
+    public static int max_normal_subarray(int[] arr, int n){
+        int maximum = 0;
+        int sum =0;
+        for(int i=0; i<n; i++){
+            sum = Math.max(arr[i], sum+arr[i]);
+            maximum = Math.max(sum,maximum);
+        }
+        return maximum;
+    }
+}

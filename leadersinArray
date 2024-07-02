@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class LeadersinArray {
+    public static void main(String[] args){
+         int [] arr = {16, 17, 4, 3, 5, 2};
+//        Output: 17, 5, 2
+        int n = arr.length;
+        ArrayList<Integer> list = new ArrayList<>();
+        int maximum = arr[n-1];
+        list.add(maximum);
+        for(int i=n-2; i>=0; i--){
+            if(arr[i]>maximum) {
+                maximum = arr[i];
+                list.addFirst(maximum);
+            }
+        }
+        System.out.println(list);
+        int len = list.size();
+        for(int i=0; i<len; i++){
+            System.out.print(list.get(i));;
+        }
+    }
+}
