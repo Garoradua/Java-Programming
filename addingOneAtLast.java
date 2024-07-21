@@ -1,7 +1,7 @@
 import java.util.*;
 public class addingOneAtLast{
     public static void main(String[] args){
-        List<Integer> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add(8);
         list.add(9);
         list.add(9);
