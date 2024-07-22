@@ -14,7 +14,7 @@ public class BinarySearchTry {
         int result = binarySearch(arr, 20 , 0 , size-1);
         System.out.println(result);
     }
-    public static int binarySearch(ArrayList<Integer> list, int x, int first, int last){
+     public static int binarySearch(ArrayList<Integer> list, int x, int first, int last){
     // int size = list.size();
     if(last<first) return -1;
     int mid = (first+last)/2;
