@@ -1,0 +1,9 @@
+int res =0;
+DiaTree(Node root){
+    if(root==null) return 0;
+    int lh = DiaTree(root.left);
+    int rh = DiaTree(root.right);
+
+    res = Math.max(res, 1+lh+rh);
+    return Math.max(lh,rh)+1;
+}

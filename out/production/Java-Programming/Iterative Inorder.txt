@@ -1,0 +1,13 @@
+void iterativeInorder(Node root){
+    Stack<Node> s = new Stack<Node>();
+    Node curr = root;
+    while(curr !=null || !s.isEmpty()){
+        while(curr!=null){
+            s.push(current.data);
+            curr = curr.left;
+        }
+        curr = s.pop();
+        sout(curr.data);
+        curr = curr.right;
+    }
+}

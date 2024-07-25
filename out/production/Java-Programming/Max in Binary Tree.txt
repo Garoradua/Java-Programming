@@ -1,0 +1,4 @@
+MaxBinary(Node root){
+   if(root==null) return INT_MIN;
+   return Math.max(root.key, Math.max(MaxBinary(root.left),MaxBinary(root.right)));
+}

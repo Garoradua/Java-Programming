@@ -1,0 +1,6 @@
+printK(root, k){
+    if(root == null) return;
+    if(k==0) sout(root.key);
+        printK(root.left, n-1);
+        printK(root.right, n-1);
+}

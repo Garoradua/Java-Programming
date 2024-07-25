@@ -1,0 +1,15 @@
+void printLevel(Node root){
+    if(root == null) return;
+    Queue<Node> q = new LinkedList<Node>();
+    q.add(root);
+    while(){
+        Node curr = q.poll();
+        sout(curr.key);
+        if(curr.left != null){
+            q.add(curr.left)
+        }
+        if(curr.right != null){
+            q.add(curr.right)
+        }
+    }
+}

@@ -1,0 +1,25 @@
+public class MorresVotingAlgo {
+    public static void main(String[] args){
+        int[] Input = {5,5,5,5,5,4,4,4,4};
+        int index = 0;
+        int n = Input.length;
+        int count=1;
+        for(int i=1; i<n; i++){
+            if(Input[i]==Input[index]){
+                count++;
+            }else count--;
+            if(count==0){
+                index = i;
+                count =1;
+            }
+        }
+        count=0;
+        for(int i=0; i<n; i++){
+            if(Input[index]==Input[i]){
+                count++;
+            }
+        }
+        if(count > n/2) System.out.println(Input[index]);
+        else System.out.println("No Majority");
+    }
+}

@@ -1,0 +1,10 @@
+int maxLevel = 0;
+PrintLeft(Node root, level){
+    if(root==null) return;
+    if(maxLevel < level){
+        sout(root.key);
+        maxlevel = level;
+    }
+    root.left(root, level+1);
+    root.right(root, level+1);
+}

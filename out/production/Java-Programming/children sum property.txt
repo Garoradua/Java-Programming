@@ -1,0 +1,10 @@
+ChildrenSUm(Node root){
+    if(root==null) return true;
+    if(root.left == null && root.right == null) return true;
+    int sum = 0;
+    if(root.left != null) sum += root.left;
+    if(root.right != null) sum += root.right;
+
+    return (root.key == sum && ChildrenSUm(root.left) && ChildrenSUm(root.right));
+     } 
+
