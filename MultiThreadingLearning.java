@@ -3,4 +3,3 @@ public class MultiThreadingLearning {
         System.out.println(Thread.currentThread().getName());
     }
 }
-jj

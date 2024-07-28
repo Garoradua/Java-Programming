@@ -21,6 +21,3 @@ public class computingpow {
         }
     }
 }
-
-2 ,2
-2, 0
