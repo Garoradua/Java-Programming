@@ -19,7 +19,7 @@ public class QuickSortPrac {
         int pivot = arr[end];
         int smallNo = start - 1;
         for(int i=start; i<=end; i++){
-            if(arr[i]<pivot){
+            if(arr[i]>pivot){
                 smallNo++;
                 int temp = arr[i];
                 arr[i] = arr[smallNo];
