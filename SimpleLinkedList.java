@@ -37,7 +37,7 @@ public class SimpleLinkedList {
         // System.out.println();
         // head = inserAtParticularPosition(head, sc);
         // printLinkedList(head);
-        // head = deleteFirstNode(head);
+        head = deleteFirstNode(head);
         // printLinkedList(head);
             // head = deleteLastNode(head);
             // printLinkedList(head);
