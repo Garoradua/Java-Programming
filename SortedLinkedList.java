@@ -13,11 +13,9 @@ class SNode{
 
 public class SortedLinkedList {
     public static void main(String[] args){
-        SNode head = new SNode(10);
-        head.next = new SNode(20);
-        head.next.next = new SNode(30);
-        head.next.next.next = new SNode(40);
-        head.next.next.next.next = new SNode(50);
+        SNode head = new SNode(1);
+        head.next = new SNode(2);
+        head.next.next = new SNode(3);
         printLinkedList(head);
         Scanner sc = new Scanner(System.in);
         // System.out.println();
@@ -30,8 +28,45 @@ public class SortedLinkedList {
         // System.out.println(data);
         // int data = NthfromEndFromTwoPointer (head, sc);
         // System.out.println(data);
-        head = reverseLinkedList(head);
+        // head = reverseLinkedList(head);
+        // printLinkedList(head);
+        // head = removeDuplicates(head);
+        // printLinkedList(head);
+        int k = sc.nextInt();
+        head = reverseKsizeLinkedList(head, k);
         printLinkedList(head);
+    }
+    private static SNode reverseKsizeLinkedList(SNode head, int k) {
+       if(head==null) return null;
+       SNode curr = head;
+       SNode prev = null;
+       SNode next = null;
+       int count = 0;
+       while(curr!=null && count <k){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+        count++;
+       }
+       if(next!=null){
+        SNode rest_head = reverseKsizeLinkedList(curr, k);
+        head.next = rest_head;
+       }
+       return prev;
+    }
+
+    private static SNode removeDuplicates(SNode head) {
+        if(head==null) return null;
+        SNode curr = head;
+        while(curr!=null && curr.next!=null){
+            if(curr.data != curr.next.data) curr = curr.next;
+            else{
+                curr.next = curr.next.next;
+            }
+        }
+        return head;
+
     }
 
     private static SNode reverseLinkedList(SNode head) {
@@ -116,8 +151,9 @@ public class SortedLinkedList {
         if(head==null) return;
         SNode temp = head;
         while(temp!=null){
-            System.out.println(temp.data);
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
     }
 }
