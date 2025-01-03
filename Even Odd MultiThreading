@@ -1,0 +1,71 @@
+public class MainClass{
+    public int limit = 100;
+    public int current = 1;
+    public void evenGenerate(){
+        synchronized(this){
+        while(current < limit){
+            while(current%2==1) {
+                try{
+                    wait();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+            System.out.println("Even number is" + current);
+            current++;
+            notify();
+        }
+    }
+    }
+
+    public void oddGenerate(){
+        synchronized(this){
+        while(current < limit){
+            while(current%2==0) {
+                try{
+                    wait();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+            System.out.println("Odd number is" + current);
+            current++;
+            notify();
+        }
+    }
+    }
+    public static void main(String[] args){
+
+        MainClass obj = new MainClass();
+        evenExceutor T1 = new evenExceutor(obj);
+        oddExceutor T2 = new oddExceutor(obj);
+
+        T1.start();
+        T2.start();
+    }
+}
+
+
+
+class evenExceutor extends Thread{
+    MainClass obj;
+    evenExceutor(MainClass obj){
+       this.obj = obj;
+    }
+    public void run(){
+        obj.evenGenerate();
+    }
+}
+
+class oddExceutor extends Thread{
+    MainClass obj;
+    oddExceutor(MainClass obj){
+       this.obj = obj;
+    }
+    public void run(){
+        obj.oddGenerate();
+    }
+}
+
